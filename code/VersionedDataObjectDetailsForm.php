@@ -210,7 +210,7 @@ class VersionedDataObjectDetailsForm_ItemRequest extends GridFieldDetailForm_Ite
 
         // This way our ID won't be unset
         $clone = clone $this->record;
-        $clone->delete();
+        $clone->deleteFromStage('Live');
 
         VersionedReadingMode::restoreOriginalReadingMode();
 
